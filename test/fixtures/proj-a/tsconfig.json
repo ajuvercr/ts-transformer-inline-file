@@ -23,13 +23,13 @@
     "esModuleInterop": true,
 
     "plugins": [
-      { "transform": "ts-transformer-inline-file/transformer" },
+      { "transform": "ts-transformer-inline-file/transformer" }
     ]
   },
   "include": [
-    "src",
+    "src"
   ],
   "exclude": [
-    "node_modules",
-  ],
+    "node_modules"
+  ]
 }
