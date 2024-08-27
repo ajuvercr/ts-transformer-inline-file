@@ -1,5 +1,5 @@
 {
-  "name": "ts-transformer-inline-file",
+  "name": "@ajuvercr/ts-transformer-inline-file",
   "version": "0.2.0",
   "description": "A TypeScript custom transformer for inlining files",
   "author": "Jakub Jirutka <jakub@jirutka.cz>",
@@ -29,8 +29,6 @@
     "build": "tsc --build",
     "clean": "rimraf coverage/ index.{d.ts,d.ts.map,js,js.map} transformer.{d.ts,d.ts.map,js,js.map} README.md *.log",
     "lint": "eslint --ext .ts,.js .",
-    "prepublishOnly": "run-s readme2md",
-    "readme2md": "asciidoctor -b docbook -a npm-readme -o - README.adoc | pandoc -f docbook -t markdown_github -o README.md",
     "test": "tsc --build && ts-node node_modules/.bin/tape test/*.test.ts",
     "watch-ts": "tsc -w"
   },
