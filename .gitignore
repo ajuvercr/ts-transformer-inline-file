@@ -8,5 +8,6 @@ node_modules/
 /index.js
 /README.md
 /transformer.js
+/invalidate.js
 *.log
 *.[jt]s.map

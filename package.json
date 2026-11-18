@@ -18,6 +18,9 @@
   ],
   "main": "index.js",
   "types": "index.d.ts",
+  "bin": {
+    "ts-inline-file-invalidate": "invalidate.js"
+  },
   "files": [
     "*.d.ts",
     "*.d.ts.map",
@@ -27,7 +30,7 @@
   ],
   "scripts": {
     "build": "tsc --build",
-    "clean": "rimraf coverage/ index.{d.ts,d.ts.map,js,js.map} transformer.{d.ts,d.ts.map,js,js.map} README.md *.log",
+    "clean": "rimraf coverage/ index.{d.ts,d.ts.map,js,js.map} transformer.{d.ts,d.ts.map,js,js.map} invalidate.{d.ts,d.ts.map,js,js.map} README.md *.log",
     "lint": "eslint --ext .ts,.js .",
     "test": "tsc --build && ts-node node_modules/.bin/tape test/*.test.ts",
     "watch-ts": "tsc -w"
