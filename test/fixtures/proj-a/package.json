@@ -12,9 +12,9 @@
   },
   "devDependencies": {
     "ts-patch": "^3.2.1",
-    "@types/node": "^10.13.0",
+    "@types/node": "^22.5.0",
     "rimraf": "^3.0.0",
     "ts-transformer-inline-file": "file:../../../",
-    "typescript": "^5.5.4"
+    "typescript": "5.5.4"
   }
 }
