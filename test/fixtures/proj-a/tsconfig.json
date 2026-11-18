@@ -3,6 +3,7 @@
     "target": "es2019",
     "module": "commonjs",
     "outDir": "./lib",
+    "incremental": true,
     "sourceMap": false,
 
     "resolveJsonModule": true,

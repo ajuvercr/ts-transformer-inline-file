@@ -64,6 +64,7 @@
   "include": [
     "index.ts",
     "transformer.ts",
+    "invalidate.ts",
   ],
   "exclude": [
     "node_modules",

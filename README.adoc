@@ -66,6 +66,29 @@ const { name, version } = { "name": "my-package", "version": "0.1.0" }
 NOTE: This works only for the top level; filtering of nested properties is currently not supported.
 
 
+=== Incremental Builds
+
+The inlined files are read by the transformer, not by TypeScript, so TypeScript does not know about them.
+With `incremental` or `composite` enabled, a build after editing _only_ an inlined file is considered up to date: it emits nothing and the output keeps the old content.
+
+Run `ts-inline-file-invalidate` before each build to avoid this.
+It deletes the build info file when a file referenced by `$INLINE_FILE` or `$INLINE_JSON` is newer than it, so the next build is a full one:
+
+.package.json:
+[source, json]
+----
+{
+  "scripts": {
+    "prebuild": "ts-inline-file-invalidate",
+    "build": "tspc"
+  }
+}
+----
+
+It reads `tsconfig.json` in the current directory; use `-p <path>` for another one.
+Watch mode is not covered: restart it after editing an inlined file.
+
+
 == How to Configure the Transformer
 
 Unfortunately, TypeScript itself does not currently provide any easy way to use custom transformers (see https://github.com/Microsoft/TypeScript/issues/14419[Microsoft/TypeScript#14419]).
